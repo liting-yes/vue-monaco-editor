@@ -1,13 +1,22 @@
 {
   "name": "vuemonaco",
   "version": "0.0.0",
-  "license": "MIT",
   "description": "monaco-editor with vue3",
+  "author": "liting-yes <luz.liting@gmail.com> (https://liting.ink/)",
+  "license": "MIT",
   "keywords": [
     "vue",
     "monaco",
     "editor",
     "monaco-editor"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/vuemonaco.mjs"
+    }
+  },
+  "files": [
+    "dist"
   ],
   "scripts": {
     "dev": "vite",
