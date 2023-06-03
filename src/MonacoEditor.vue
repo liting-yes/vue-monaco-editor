@@ -22,12 +22,7 @@ const props = withDefaults(defineProps<Props>(), {
     },
     copyWithSyntaxHighlighting: true,
     cursorSmoothCaretAnimation: 'on',
-    dimension: {
-      width: 600,
-      height: 900,
-    },
     emptySelectionClipboard: false,
-    extraEditorClassName: 'vuemonaco-editor',
     find: {
       addExtraSpaceOnTop: true,
     },
@@ -66,7 +61,14 @@ defineExpose({
 </script>
 
 <template>
-  <div ref="manocaEditorRef" style="height:100%" />
+  <div ref="manocaEditorRef" class="vuemonaco-editor" />
 </template>
 
-<style scoped></style>
+<style>
+.vuemonaco-editor {
+  width:100%;
+  height:100%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+</style>
