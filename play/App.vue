@@ -4,10 +4,23 @@ import ManacoEditor from '../src'
 
 <template>
   <main>
-    <ManacoEditor />
+    <h1>vuemonaco</h1>
+    <h2>ManacoEditor</h2>
+    <ManacoEditor value="console.log('Hello, vuemonaco !')" language="javascript" style="height:30vh;" />
   </main>
 </template>
 
 <style scoped>
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 1000px;
+  margin: 0 auto;
+}
 
+h2 {
+  align-self: start;
+}
 </style>
