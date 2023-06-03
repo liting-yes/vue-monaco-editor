@@ -4,14 +4,16 @@ import * as monaco from 'monaco-editor/esm/vs/editor/editor.api'
 import { isNull } from 'lodash-es'
 
 export interface Props {
-  value?: string | null
+  language?: string
   readOnly?: boolean | null
+  value?: string | null
   options?: monaco.editor.IStandaloneEditorConstructionOptions
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  value: null,
+  language: '',
   readOnly: null,
+  value: null,
   options: () => ({
     automaticLayout: true,
     bracketPairColorization: {
@@ -25,6 +27,7 @@ const props = withDefaults(defineProps<Props>(), {
       height: 900,
     },
     emptySelectionClipboard: false,
+    extraEditorClassName: 'vuemonaco-editor',
     find: {
       addExtraSpaceOnTop: true,
     },
@@ -33,18 +36,19 @@ const props = withDefaults(defineProps<Props>(), {
     mouseWheelZoom: true,
     smoothScrolling: true,
     tabSize: 2,
-    domReadOnly: true,
-    // readOnly: true,
+    wrappingIndent: 'indent',
   }),
 })
 
 const options = computed(() => {
   const options = props.options ?? {}
 
-  if (!isNull(props.value))
-    options.value = props.value
+  if (props.language)
+    options.language = props.language
   if (!isNull(props.readOnly))
     options.readOnly = props.readOnly
+  if (!isNull(props.value))
+    options.value = props.value
 
   return options
 })
@@ -56,14 +60,13 @@ onMounted(() => {
 })
 
 defineExpose({
+  monaco,
   editor,
 })
 </script>
 
 <template>
-  <div class="vuemonaco">
-    <div ref="manocaEditorRef" />
-  </div>
+  <div ref="manocaEditorRef" style="height:100%" />
 </template>
 
 <style scoped></style>

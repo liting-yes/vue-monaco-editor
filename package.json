@@ -22,8 +22,7 @@
     "prepare": "npx simple-git-hooks"
   },
   "dependencies": {
-    "monaco-editor": "^0.38.0",
-    "vue": "^3.3.2"
+    "monaco-editor": "^0.38.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.39.4",
@@ -49,6 +48,7 @@
     "simple-git-hooks": "^2.8.1",
     "typescript": "~5.0.4",
     "vite": "^4.3.5",
+    "vue": "^3.3.4",
     "vue-tsc": "^1.6.4"
   },
   "config": {
@@ -66,5 +66,8 @@
   },
   "lint-staged": {
     "*.{vue,ts,json,cjs}": "eslint --fix --ignore-path .gitignore"
+  },
+  "peerDependencies": {
+    "vue": "3.x"
   }
 }

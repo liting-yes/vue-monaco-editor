@@ -4,7 +4,7 @@ import ManacoEditor from '../src'
 
 <template>
   <main>
-    <ManacoEditor :style="{ height: '100px' }" />
+    <ManacoEditor />
   </main>
 </template>
 
