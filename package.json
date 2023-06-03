@@ -1,9 +1,13 @@
 {
-  "name": "vuemonaco",
+  "name": "@liting-yes/vue-monaco-editor",
   "version": "0.1.0",
   "description": "monaco-editor with vue3",
   "author": "liting-yes <luz.liting@gmail.com> (https://liting.ink/)",
   "license": "MIT",
+  "homepage": "https://github.com/liting-yes/vue-monaco-editor#readme",
+  "bugs": {
+    "url": "https://github.com/liting-yes/vue-monaco-editor/issues"
+  },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
@@ -16,7 +20,8 @@
   ],
   "exports": {
     ".": {
-      "import": "./dist/vuemonaco.mjs"
+      "import": "./dist/vue-monaco-editor.mjs",
+      "style.css": "./dist/style.css"
     }
   },
   "files": [

@@ -14,7 +14,6 @@ export default defineConfig({
   build: {
     lib: {
       entry: 'src/index.ts',
-      name: 'vuenomano',
       formats: ['es'],
     },
     rollupOptions: {
