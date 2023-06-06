@@ -10,6 +10,8 @@ pnpm add @liting-yes/vue-monaco-editor
 
 ## Usage
 
+`import '@liting-yes/vue-monaco-editor/style.css'`
+
 ### MonacoEditor
 
 ```vue
