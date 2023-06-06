@@ -1,12 +1,14 @@
 <script setup lang="ts">
-import ManacoEditor from '../src'
+import { MonacoDiffEditor, MonacoEditor } from '../src'
 </script>
 
 <template>
   <main>
     <h1>Vue Monaco Editor</h1>
     <h2>ManacoEditor</h2>
-    <ManacoEditor value="console.log('Hello, vuemonaco !')" language="javascript" style="height:30vh;" />
+    <MonacoEditor value="console.log('Hello, vuemonaco !')" language="javascript" style="height:30vh;" />
+    <h2>ManacoDiffEditor</h2>
+    <MonacoDiffEditor style="height:30vh;" />
   </main>
 </template>
 

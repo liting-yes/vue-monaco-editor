@@ -28,7 +28,7 @@
     "dist"
   ],
   "scripts": {
-    "dev": "vite",
+    "dev": "vite  --host",
     "build": "run-p type-check build-only",
     "preview": "vite preview",
     "test:e2e": "playwright test",
