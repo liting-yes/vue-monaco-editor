@@ -16,7 +16,8 @@
     "vue",
     "monaco",
     "editor",
-    "monaco-editor"
+    "monaco-editor",
+    "code-editor"
   ],
   "exports": {
     ".": {
