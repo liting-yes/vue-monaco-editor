@@ -31,14 +31,15 @@
   "scripts": {
     "dev": "vite  --host",
     "build": "run-p type-check build-only",
-    "preview": "vite preview",
     "test:e2e": "playwright test",
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "commit": "git add . && git-cz",
     "release": "vite build && bumpp && npm publish",
-    "prepare": "npx simple-git-hooks"
+    "prepare": "npx simple-git-hooks",
+    "build:play": "vite build -c vite.config.play.ts",
+    "preview": "vite preview  -c vite.config.play.ts"
   },
   "peerDependencies": {
     "vue": "3.x"
