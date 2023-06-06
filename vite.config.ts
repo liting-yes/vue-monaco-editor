@@ -17,7 +17,7 @@ export default defineConfig({
       formats: ['es'],
     },
     rollupOptions: {
-      external: [/monaco-editor/],
+      external: ['monaco-editor/esm/vs/editor/editor.api'],
     },
   },
 })
