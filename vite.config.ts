@@ -10,8 +10,8 @@ export default defineConfig({
       formats: ['es'],
     },
     rollupOptions: {
-      // external: ['monaco-editor/esm/vs/editor/editor.api', 'vue'],
-      external: ['vue'],
+      external: ['monaco-editor', 'vue'],
+      // external: ['vue'],
     },
   },
 })
