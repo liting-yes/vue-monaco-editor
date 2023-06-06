@@ -1,19 +1,16 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
 import * as monaco from 'monaco-editor/esm/vs/editor/editor.api'
-import { isNull } from 'lodash-es'
+import { isNil } from 'lodash-es'
 
 export interface Props {
   language?: string
-  readOnly?: boolean | null
-  value?: string | null
+  readOnly?: boolean
+  value?: string
   options?: monaco.editor.IStandaloneEditorConstructionOptions
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  language: '',
-  readOnly: null,
-  value: null,
   options: () => ({
     automaticLayout: true,
     bracketPairColorization: {
@@ -38,11 +35,11 @@ const props = withDefaults(defineProps<Props>(), {
 const options = computed(() => {
   const options = props.options ?? {}
 
-  if (props.language)
+  if (!isNil(props.language))
     options.language = props.language
-  if (!isNull(props.readOnly))
+  if (!isNil(props.readOnly))
     options.readOnly = props.readOnly
-  if (!isNull(props.value))
+  if (!isNil(props.value))
     options.value = props.value
 
   return options
