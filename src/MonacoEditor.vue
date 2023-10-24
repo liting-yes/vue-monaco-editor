@@ -45,10 +45,10 @@ const options = computed(() => {
   return options
 })
 
-const manocaEditorRef = ref()
+const monacoEditorRef = ref()
 const editor = ref<monaco.editor.IStandaloneCodeEditor>()
 onMounted(() => {
-  editor.value = monaco.editor.create(manocaEditorRef.value, options.value)
+  editor.value = monaco.editor.create(monacoEditorRef.value, options.value)
 })
 
 defineExpose({
@@ -58,7 +58,7 @@ defineExpose({
 </script>
 
 <template>
-  <div ref="manocaEditorRef" class="vue-monaco-editor" />
+  <div ref="monacoEditorRef" class="vue-monaco-editor" />
 </template>
 
 <style>
